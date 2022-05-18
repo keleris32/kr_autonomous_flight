@@ -184,8 +184,8 @@ vec_Vec3d VoxelMapper::getInflatedLocalCloud(const Eigen::Vector3d& pos,
   return pts;
 }
 
-planning_ros_msgs::VoxelMap VoxelMapper::getMap() {
-  planning_ros_msgs::VoxelMap voxel_map;
+kr_planning_msgs::VoxelMap VoxelMapper::getMap() {
+  kr_planning_msgs::VoxelMap voxel_map;
   voxel_map.origin.x = origin_d_(0);
   voxel_map.origin.y = origin_d_(1);
   voxel_map.origin.z = origin_d_(2);
@@ -213,8 +213,8 @@ planning_ros_msgs::VoxelMap VoxelMapper::getMap() {
   return voxel_map;
 }
 
-planning_ros_msgs::VoxelMap VoxelMapper::getInflatedMap() {
-  planning_ros_msgs::VoxelMap voxel_map;
+kr_planning_msgs::VoxelMap VoxelMapper::getInflatedMap() {
+  kr_planning_msgs::VoxelMap voxel_map;
   voxel_map.origin.x = origin_d_(0);
   voxel_map.origin.y = origin_d_(1);
   voxel_map.origin.z = origin_d_(2);
@@ -243,9 +243,9 @@ planning_ros_msgs::VoxelMap VoxelMapper::getInflatedMap() {
 }
 
 // crop a local voxel map from the global voxel map
-planning_ros_msgs::VoxelMap VoxelMapper::getInflatedLocalMap(
+kr_planning_msgs::VoxelMap VoxelMapper::getInflatedLocalMap(
     const Eigen::Vector3d& ori_d, const Eigen::Vector3d& dim_d) {
-  planning_ros_msgs::VoxelMap voxel_map;
+  kr_planning_msgs::VoxelMap voxel_map;
 
   voxel_map.resolution = res_;
   voxel_map.origin.x = ori_d(0);
@@ -299,9 +299,9 @@ planning_ros_msgs::VoxelMap VoxelMapper::getInflatedLocalMap(
 
 // TODO(xu): This function is the same as sliceMap function in
 // data_conversions.cpp, should merge them.
-planning_ros_msgs::VoxelMap VoxelMapper::getInflatedOccMap(double h,
+kr_planning_msgs::VoxelMap VoxelMapper::getInflatedOccMap(double h,
                                                            double hh) {
-  planning_ros_msgs::VoxelMap voxel_map;
+  kr_planning_msgs::VoxelMap voxel_map;
   voxel_map.origin.x = origin_d_(0);
   voxel_map.origin.y = origin_d_(1);
   voxel_map.origin.z = 0;

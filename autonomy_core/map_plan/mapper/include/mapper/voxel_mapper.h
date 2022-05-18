@@ -1,6 +1,6 @@
 #pragma once
 
-#include <planning_ros_msgs/VoxelMap.h>
+#include <kr_planning_msgs/VoxelMap.h>
 
 #include <Eigen/Geometry>
 #include <boost/multi_array.hpp>
@@ -58,7 +58,7 @@ class VoxelMapper {
    *
    * Assume the map is in a fixed frame
    */
-  planning_ros_msgs::VoxelMap getInflatedLocalMap(const Eigen::Vector3d& ori,
+  kr_planning_msgs::VoxelMap getInflatedLocalMap(const Eigen::Vector3d& ori,
                                                   const Eigen::Vector3d& dim);
 
   /**
@@ -83,16 +83,16 @@ class VoxelMapper {
                                   const Eigen::Vector3d& dim);
 
   /// Get the map
-  planning_ros_msgs::VoxelMap getMap();
+  kr_planning_msgs::VoxelMap getMap();
   /// Get the inflated map
-  planning_ros_msgs::VoxelMap getInflatedMap();
+  kr_planning_msgs::VoxelMap getInflatedMap();
 
   /**
    * @brief Get the 2D slice of inflated point cloud
    * @param h the height (z-axis value) to get the slice
    * @param hh the thickness of the slice, zero means one-voxel thick
    */
-  planning_ros_msgs::VoxelMap getInflatedOccMap(double h, double hh = 0);
+  kr_planning_msgs::VoxelMap getInflatedOccMap(double h, double hh = 0);
 
   /**
    * @brief Add point cloud to global map
@@ -164,7 +164,7 @@ class VoxelMapper {
   /// Inflated map object, it is a 3D array
   boost::multi_array<int8_t, 3> inflated_map_;
 
-  planning_ros_msgs::VoxelMap voxel_map;
+  kr_planning_msgs::VoxelMap voxel_map;
 
   /// Value free
   // Now replaced with parameter value from VoxelMap.msg
