@@ -1,0 +1,15 @@
+- position: [2.5, -27, 3] # on the road
+- position: [27.6, -30, 3] # under tree
+# - position: [35, -22, 3] # under tree
+# - position: [10, -11, 3] # way back home
+- position: [4, -10, 3] # on the road
+- position: [2.5, -27, 3] # on the road
+- position: [27.6, -30, 3] # under tree
+# - position: [35, -22, 3] # under tree
+# - position: [10, -11, 3] # way back home
+- position: [4, -10, 3] # on the road
+- position: [2.5, -27, 3] # on the road
+- position: [27.6, -30, 3] # under tree
+# - position: [35, -22, 3] # under tree
+# - position: [10, -11, 3] # way back home
+- position: [0, 0, 3]
