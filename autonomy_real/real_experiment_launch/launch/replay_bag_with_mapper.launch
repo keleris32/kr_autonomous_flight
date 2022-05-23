@@ -11,6 +11,12 @@
 
   <arg name="poll_period" default="1.0" />
 
+  <!-- publish_tf -->
+  <include file="$(find real_experiment_launch)/launch/publish_lidar_tf.launch">
+    <arg name="robot" value="$(arg robot)" />
+  </include>
+
+
   <!-- drivers -->
   <include file="$(find real_experiment_launch)/launch/ouster_decoder.launch">
     <arg name="robot" value="$(arg robot)" />

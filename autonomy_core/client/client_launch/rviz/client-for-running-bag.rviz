@@ -1,0 +1,628 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 0
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Status1
+        - /Grid1
+        - /TF1/Frames1
+        - /Env1/Environment1
+        - /Planner1/global_path1
+        - /Maps1/Local1
+        - /Maps1/Global1
+        - /Maps1/VoxelMap1
+        - /Estimation1
+        - /Estimation1/ground_truth_odom1/Shape1
+        - /Estimation1/vio_corrected1/Shape1
+        - /Estimation1/vio_corrected1/Covariance1
+        - /Estimation1/vio_corrected1/Covariance1/Position1
+        - /Estimation1/vio_corrected1/Covariance1/Orientation1
+        - /Estimation1/vio_drifted1
+        - /Estimation1/vio_drifted1/Shape1
+        - /Estimation1/graphslam1
+        - /Estimation1/graphslam1/Shape1
+        - /Estimation1/ukf_odom1
+        - /Estimation1/ukf_odom1/Shape1
+        - /PointCloud21
+      Splitter Ratio: 0.5211267471313477
+    Tree Height: 574
+  - Class: rviz/Selection
+    Name: Selection
+  - Class: rviz/Tool Properties
+    Expanded:
+      - /2D Pose Estimate1
+      - /2D Nav Goal1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.5886790156364441
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: Local
+Preferences:
+  PromptSaveOnExit: true
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.20000000298023224
+      Cell Size: 10
+      Class: rviz/Grid
+      Color: 255; 255; 255
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 500
+        Y: 500
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 200
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Class: rviz/TF
+      Enabled: false
+      Frame Timeout: 1
+      Frames:
+        All Enabled: false
+      Marker Alpha: 1
+      Marker Scale: 10
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        {}
+      Update Interval: 0
+      Value: false
+    - Class: rviz/InteractiveMarkers
+      Enable Transparency: true
+      Enabled: true
+      Name: InteractiveMarkers
+      Show Axes: true
+      Show Descriptions: true
+      Show Visual Aids: true
+      Update Topic: /waypoint_nav/update
+      Value: true
+    - Class: rviz/Group
+      Displays:
+        - Class: rviz/Marker
+          Enabled: true
+          Marker Topic: /env_vis/env
+          Name: Environment
+          Namespaces:
+            {}
+          Queue Size: 100
+          Value: true
+      Enabled: false
+      Name: Env
+    - Class: rviz/Group
+      Displays:
+        - Class: planning_rviz_plugins/Path
+          Enabled: true
+          LineColor: 204; 51; 204
+          LineScale: 0.30000001192092896
+          Name: global_path
+          NodeColor: 85; 85; 255
+          NodeScale: 0.30000001192092896
+          Queue Size: 10
+          Topic: /quadrotor/global_plan_server/path
+          Unreliable: false
+          Value: true
+        - Class: planning_rviz_plugins/Path
+          Enabled: true
+          LineColor: 0; 255; 0
+          LineScale: 0.800000011920929
+          Name: global_path_wrt_odom
+          NodeColor: 239; 41; 41
+          NodeScale: 1
+          Queue Size: 10
+          Topic: /quadrotor/local_global_replan_server/local_global_server/global_path_wrt_odom
+          Unreliable: false
+          Value: true
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud
+          Color: 204; 51; 204
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: true
+          Max Color: 239; 41; 41
+          Min Color: 0; 0; 0
+          Name: ExpandedCloud
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.10000000149011612
+          Style: Boxes
+          Topic: /quadrotor/local_plan_server/expanded_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Class: planning_rviz_plugins/Path
+          Enabled: true
+          LineColor: 78; 154; 6
+          LineScale: 0.800000011920929
+          Name: cropped_global_path_to_local_goal
+          NodeColor: 255; 0; 0
+          NodeScale: 0.75
+          Queue Size: 10
+          Topic: /quadrotor/local_global_replan_server/local_global_server/cropped_local_path
+          Unreliable: false
+          Value: true
+        - AccColor: 10; 200; 55
+          AccScale: 0.014999999664723873
+          AccVis: true
+          Class: planning_rviz_plugins/Trajectory
+          Enabled: true
+          JrkColor: 200; 20; 55
+          JrkScale: 0.014999999664723873
+          JrkVis: true
+          Name: Trajectory
+          Num of samples: 100
+          NumYaw: 20
+          PosColor: 46; 52; 54
+          PosScale: 0.10000000149011612
+          Queue Size: 10
+          Topic: /quadrotor/local_plan_server/traj
+          Unreliable: false
+          Value: true
+          VelColor: 85; 85; 255
+          VelScale: 0.014999999664723873
+          VelVis: true
+          YawColor: 100; 20; 55
+          YawScale: 0.05000000074505806
+          YawTriangleAngle: 0.699999988079071
+          YawTriangleScale: 0.5
+          YawVis: true
+        - Class: planning_rviz_plugins/Path
+          Enabled: true
+          LineColor: 0; 170; 255
+          LineScale: 0.5
+          Name: coverage_path
+          NodeColor: 239; 41; 41
+          NodeScale: 1
+          Queue Size: 10
+          Topic: /quadrotor/coverage_path_visualization
+          Unreliable: false
+          Value: true
+      Enabled: true
+      Name: Planner
+    - Alpha: 1
+      Class: rviz/Axes
+      Enabled: true
+      Length: 2
+      Name: Axes
+      Radius: 0.20000000298023224
+      Reference Frame: <Fixed Frame>
+      Show Trail: false
+      Value: true
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 9.449999809265137
+            Min Value: 0.05000000074505806
+            Value: true
+          Axis: Z
+          BoundScale: 0.20000000298023224
+          Channel Name: intensity
+          Class: planning_rviz_plugins/VoxelMap
+          Color: 239; 41; 41
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          MeshAlpha: 0.019999999552965164
+          MeshColor: 0; 170; 255
+          MeshHeight: 0.5
+          Min Color: 0; 0; 0
+          Name: Local
+          Position Transformer: XYZ
+          Queue Size: 1
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.25
+          State: Occupied
+          Style: Boxes
+          Topic: /quadrotor/mapper/local_voxel_map
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Alpha: 0.25
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 14.100000381469727
+            Min Value: -1.499999761581421
+            Value: true
+          Axis: Z
+          BoundScale: 0
+          Channel Name: intensity
+          Class: planning_rviz_plugins/VoxelMap
+          Color: 252; 233; 79
+          Color Transformer: AxisColor
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          MeshAlpha: 0.10000000149011612
+          MeshColor: 255; 255; 255
+          MeshHeight: 0.5
+          Min Color: 0; 0; 0
+          Name: Global
+          Position Transformer: XYZ
+          Queue Size: 1
+          Selectable: true
+          Size (Pixels): 10
+          Size (m): 0.6000000238418579
+          State: Occupied
+          Style: Boxes
+          Topic: /quadrotor/mapper/global_voxel_map
+          Unreliable: true
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          BoundScale: 0.10000000149011612
+          Channel Name: intensity
+          Class: planning_rviz_plugins/VoxelMap
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          MeshAlpha: 0.20000000298023224
+          MeshColor: 0; 170; 255
+          MeshHeight: 0.5
+          Min Color: 0; 0; 0
+          Name: VoxelMap
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.009999999776482582
+          State: Occupied
+          Style: Flat Squares
+          Topic: /quadrotor/mapper/local_voxel_map_throttled
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+      Enabled: true
+      Name: Maps
+    - Class: rviz/Group
+      Displays:
+        - Angle Tolerance: 0.10000000149011612
+          Class: rviz/Odometry
+          Covariance:
+            Orientation:
+              Alpha: 0.5
+              Color: 255; 255; 127
+              Color Style: Unique
+              Frame: Local
+              Offset: 1
+              Scale: 1
+              Value: true
+            Position:
+              Alpha: 0.30000001192092896
+              Color: 204; 51; 204
+              Scale: 1
+              Value: true
+            Value: true
+          Enabled: true
+          Keep: 1
+          Name: ground_truth_odom
+          Position Tolerance: 0.10000000149011612
+          Queue Size: 10
+          Shape:
+            Alpha: 1
+            Axes Length: 10
+            Axes Radius: 0.5
+            Color: 25; 255; 0
+            Head Length: 0.30000001192092896
+            Head Radius: 0.10000000149011612
+            Shaft Length: 10
+            Shaft Radius: 0.05000000074505806
+            Value: Axes
+          Topic: /unity_command/ground_truth/quadrotor/odom
+          Unreliable: false
+          Value: true
+        - Angle Tolerance: 0.10000000149011612
+          Class: rviz/Odometry
+          Covariance:
+            Orientation:
+              Alpha: 0.30000001192092896
+              Color: 255; 255; 127
+              Color Style: Unique
+              Frame: Local
+              Offset: 1
+              Scale: 1
+              Value: true
+            Position:
+              Alpha: 0.30000001192092896
+              Color: 204; 51; 204
+              Scale: 1
+              Value: true
+            Value: true
+          Enabled: false
+          Keep: 1
+          Name: vio_corrected
+          Position Tolerance: 0.10000000149011612
+          Queue Size: 10
+          Shape:
+            Alpha: 1
+            Axes Length: 3
+            Axes Radius: 1
+            Color: 255; 25; 0
+            Head Length: 0.30000001192092896
+            Head Radius: 0.10000000149011612
+            Shaft Length: 3
+            Shaft Radius: 0.05000000074505806
+            Value: Axes
+          Topic: /quadrotor/vio/odom
+          Unreliable: false
+          Value: false
+        - Angle Tolerance: 0.10000000149011612
+          Class: rviz/Odometry
+          Covariance:
+            Orientation:
+              Alpha: 0.5
+              Color: 255; 255; 127
+              Color Style: Unique
+              Frame: Local
+              Offset: 1
+              Scale: 1
+              Value: true
+            Position:
+              Alpha: 0.30000001192092896
+              Color: 204; 51; 204
+              Scale: 1
+              Value: true
+            Value: false
+          Enabled: true
+          Keep: 1000
+          Name: vio_drifted
+          Position Tolerance: 0.10000000149011612
+          Queue Size: 10
+          Shape:
+            Alpha: 1
+            Axes Length: 0.10000000149011612
+            Axes Radius: 1
+            Color: 189; 234; 201
+            Head Length: 0
+            Head Radius: 0.5
+            Shaft Length: 1
+            Shaft Radius: 0.5
+            Value: Arrow
+          Topic: /quadrotor/vio/odom
+          Unreliable: false
+          Value: true
+        - Angle Tolerance: 0.10000000149011612
+          Class: rviz/Odometry
+          Covariance:
+            Orientation:
+              Alpha: 0.5
+              Color: 255; 255; 127
+              Color Style: Unique
+              Frame: Local
+              Offset: 1
+              Scale: 1
+              Value: true
+            Position:
+              Alpha: 0.30000001192092896
+              Color: 204; 51; 204
+              Scale: 1
+              Value: true
+            Value: true
+          Enabled: false
+          Keep: 1
+          Name: graphslam
+          Position Tolerance: 0.10000000149011612
+          Queue Size: 1
+          Shape:
+            Alpha: 1
+            Axes Length: 6
+            Axes Radius: 0.75
+            Color: 255; 25; 0
+            Head Length: 0.30000001192092896
+            Head Radius: 0.10000000149011612
+            Shaft Length: 1
+            Shaft Radius: 0.05000000074505806
+            Value: Axes
+          Topic: /graph_slam/odom
+          Unreliable: false
+          Value: false
+        - Angle Tolerance: 0.10000000149011612
+          Class: rviz/Odometry
+          Covariance:
+            Orientation:
+              Alpha: 0.5
+              Color: 255; 255; 127
+              Color Style: Unique
+              Frame: Local
+              Offset: 1
+              Scale: 1
+              Value: true
+            Position:
+              Alpha: 0.30000001192092896
+              Color: 204; 51; 204
+              Scale: 1
+              Value: true
+            Value: true
+          Enabled: true
+          Keep: 1
+          Name: ukf_odom
+          Position Tolerance: 0.10000000149011612
+          Queue Size: 10
+          Shape:
+            Alpha: 1
+            Axes Length: 4
+            Axes Radius: 1
+            Color: 255; 25; 0
+            Head Length: 0.30000001192092896
+            Head Radius: 0.10000000149011612
+            Shaft Length: 1
+            Shaft Radius: 0.05000000074505806
+            Value: Axes
+          Topic: /quadrotor/odom
+          Unreliable: false
+          Value: true
+        - Alpha: 1
+          Axes Length: 10
+          Axes Radius: 0.10000000149011612
+          Class: rviz/Pose
+          Color: 255; 25; 0
+          Enabled: false
+          Head Length: 0.30000001192092896
+          Head Radius: 0.10000000149011612
+          Name: SE3_cmd
+          Queue Size: 10
+          Shaft Length: 1
+          Shaft Radius: 0.05000000074505806
+          Shape: Axes
+          Topic: /quadrotor/so3_control/cmd_viz
+          Unreliable: false
+          Value: false
+      Enabled: true
+      Name: Estimation
+    - Class: rviz/InteractiveMarkers
+      Enable Transparency: true
+      Enabled: true
+      Name: InteractiveMarkers
+      Show Axes: false
+      Show Descriptions: true
+      Show Visual Aids: false
+      Update Topic: /quadrotor/waypoint_nav/update
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 14.244654655456543
+        Min Value: -0.7815017104148865
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 136; 138; 133
+      Color Transformer: FlatColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: true
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 1
+      Style: Points
+      Topic: /quadrotor/cloud
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 0; 0; 0
+    Default Light: true
+    Fixed Frame: quadrotor/map
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+    - Class: rviz/SetInitialPose
+      Theta std deviation: 0.2617993950843811
+      Topic: /initialpose
+      X std deviation: 0.5
+      Y std deviation: 0.5
+    - Class: rviz/SetGoal
+      Topic: /move_base_simple/goal
+    - Class: rviz/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+    - Class: waypoint_nav_plugin/WaypointNav
+      WaypointsTool:
+        default_height: 5
+        frame_id: quadrotor/map
+        topic: waypoints
+  Value: true
+  Views:
+    Current:
+      Class: rviz/ThirdPersonFollower
+      Distance: 183.58934020996094
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Field of View: 0.7853981852531433
+      Focal Point:
+        X: -1.404947280883789
+        Y: -1.114139437675476
+        Z: 2.2109077690402046e-05
+      Focal Shape Fixed Size: false
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 1.0354002714157104
+      Target Frame: quadrotor/base_link
+      Yaw: 3.197185754776001
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1136
+  Hide Left Dock: false
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd000000040000000000000292000003d2fc0200000009fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d0000027b000000c900fffffffb000000260057006100790070006f0069006e00740020004e0061007600690067006100740069006f006e01000002be00000151000000be00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c000002610000000100000101000003d2fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d000003d2000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000053d0000003efc0100000002fb0000000800540069006d006501000000000000053d000002eb00fffffffb0000000800540069006d006501000000000000045000000000000000000000019e000003d200000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: false
+  Waypoint Navigation:
+    collapsed: false
+  Width: 1341
+  X: 72
+  Y: 27

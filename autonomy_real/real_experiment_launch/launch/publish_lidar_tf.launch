@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+    <arg name="robot" default="quadrotor" />
+    <!-- ovc-imu to body transform -->
+    <node pkg="tf2_ros" type="static_transform_publisher" name="$(arg robot)lidar_lidar_tf" args="0 0 0.0 0 0 0 $(arg robot)/lidar os_lidar" />
+</launch>
