@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# modified based on http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29
 import rospy
 from std_msgs.msg import String
 import json
@@ -8,7 +9,7 @@ def callback(data):
     with open('ouster_metadata_parsed.json', 'w') as f:
         json.dump(x, f, ensure_ascii=False, indent=4)    
         #  json.dump(data.data, f)
-    rospy.loginfo(rospy.get_caller_id() + "I heard %s", data.data)
+    print("metadata saved")
     
 def listener():
 
